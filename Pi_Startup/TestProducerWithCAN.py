@@ -52,7 +52,7 @@ def id301(data):
     #print('Motor temp: ' + str(value1))
     data2 = "0x" + data[2:4]
     value2 = int(data2, 0)
-    #print('Motor RPM: ' + str(value2))
+    print('Motor RPM: ' + str(value2))
 
 def id302(data):
     data = str(bytearray(data).hex())
@@ -83,19 +83,19 @@ while True:
 
     if message.arbitration_id==300: 
         id300(message.data)
-        print("change to col300")
+        #print("change to col300")
     elif message.arbitration_id==301:
         id301(message.data)
-        print("change to col301")
+        #print("change to col301")
     elif message.arbitration_id==302:
         id302(message.data)
-        print("change to col302")
+        #print("change to col302")
     elif message.arbitration_id==303:
         id303(message.data)
-        print("change to col303")
+        #print("change to col303")
     elif message.arbitration_id==304:
         id304(message.data)
-        print("change to col304")
+        #print("change to col304")
 
     if col300==False & col301==False:
         nowdatetime = datetime.now()

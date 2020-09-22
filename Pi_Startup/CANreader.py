@@ -11,6 +11,11 @@ hydraulicTemp = 20
 fuelLevel=100
 hydraulicPressure=10
 motorRPM=10
+TimeSinceHydServ = 10
+TimeSinceMotServ = 10
+MechanicalMotTime = 10
+MotRunTimeHour = 10
+MotRunTimeMin = 10
 
 # Set the delay time
 delaytime = 1
@@ -32,8 +37,9 @@ bus = can.interface.Bus(can_interface, bustype='socketcan')
 def id300(data):
     data = str(bytearray(data).hex())
     data1 = "0x" + data[4:6]
-    value1 = int(data1, 0)
-    # print('Fuel level: ' + str(value1))
+    global fuelLevel
+    fuelLevel = int(data1, 0)
+    # print('Fuel level: ' + str(fuelLevel))
     data1 = "0x" + data[8:10]
     global hydraulicPressure
     hydraulicPressure = int(data1, 0)
@@ -59,11 +65,13 @@ def id301(data):
 def id302(data):
     data = str(bytearray(data).hex())
     data1 = "0x" + data[0:2]
-    value1 = int(data1, 0)
-    # print('Time since Hyd service: ' + str(value1))
-    data2 = "0x" + data[2:4]
-    value1 = int(data1, 0)
-    # print('Time since Hyd service: ' + str(value1))
+    global TimeSinceHydServ
+    TimeSinceHydServ = int(data1, 0)
+    #print('Time since Hyd service: ' + str(TimeSinceHydServ))
+    data2 = "0x" + data[4:6]
+    global TimeSinceMotServ
+    TimeSinceMotServ = int(data1, 0)
+    #print('Time since Mot service: ' + str(TimeSinceMotServ))
 
 
 def id303(data):
@@ -118,8 +126,8 @@ while True:
     msg_txt_formatted = MSG_TXT.format(motorTemp=motorTemp, hydraulicTemp=hydraulicTemp, fuelLevel=fuelLevel, hydraulicPressure=hydraulicPressure, nowTime=nowTime)
     Rabbitmessage = msg_txt_formatted
 
-    channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=Rabbitmessage)
+    #channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=Rabbitmessage)
     time.sleep(delaytime)
-    #print(" [X] Sent %r:%r" % (Rabbitmessage))
+    print(Rabbitmessage)
 
 connection.close()
