@@ -96,14 +96,16 @@ def id304(data):
     columns = [col1, col2, col3]
     print(col1, col2, col3)
     for value in columns:
-        if(re.search('[a-zA-Z]', value)):
+        if (re.search('[a-zA-Z]', value)):
+            print("contains a letter")
+        else:
             value = int(value)
-        for error in errors:
-            if (error<=value):
-                value=value-error
-                #print(errorIndex)
-                errorList=(errorList + str(errorIndex) + ',')
-            errorIndex = errorIndex + 1
+            for error in errors:
+                if (error <= value):
+                    value = value - error
+                    # print(errorIndex)
+                    errorList = (errorList + str(errorIndex) + ',')
+                errorIndex = errorIndex + 1
 
 <<<<<<< HEAD
 =======
