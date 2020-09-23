@@ -75,16 +75,17 @@ def id302(data):
 
 
 def id303(data):
+    data = str(bytearray(data).hex())
+    
+
+def id304(data):
     alarmvalue = str(bytearray(data).hex())
+    print(alarmvalue)
     col1 = alarmvalue[0:2]
     col2 = alarmvalue[2:4]
     col3 = alarmvalue[4:6]
     columns = [col1, col2, col3]
     print(col1, col2, col3)
-
-def id304(data):
-    data = str(bytearray(data).hex())
-
 
 
 def ReadCANData(col300, col301, col302, col303, col304):
@@ -133,6 +134,6 @@ while True:
 
     #channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=Rabbitmessage)
     time.sleep(delaytime)
-    print(Rabbitmessage)
+    #print(Rabbitmessage)
 
 connection.close()
