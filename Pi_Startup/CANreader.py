@@ -78,16 +78,11 @@ def id302(data):
 
 def id303(data):
     data = str(bytearray(data).hex())
-<<<<<<< HEAD
-    
-
-def id304(data):
-=======
 
 def id304(data):
     errorIndex = 0
+    errorList=''
     errors = [80, 40, 20, 10, 8, 4, 2, 1]
->>>>>>> 59ec2d4218a06f3a52afd2a6a7896f6894d49362
     alarmvalue = str(bytearray(data).hex())
     print(alarmvalue)
     col1 = alarmvalue[0:2]
@@ -106,14 +101,9 @@ def id304(data):
                     # print(errorIndex)
                     errorList = (errorList + str(errorIndex) + ',')
                 errorIndex = errorIndex + 1
-
-<<<<<<< HEAD
-=======
     global alarms
     alarms = errorList.rstrip(',')
     print(alarms)
-
->>>>>>> 59ec2d4218a06f3a52afd2a6a7896f6894d49362
 
 def ReadCANData(col300, col301, col302, col303, col304):
     messageID0 = col300
