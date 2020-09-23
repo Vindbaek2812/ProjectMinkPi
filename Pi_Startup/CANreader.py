@@ -75,11 +75,16 @@ def id302(data):
 
 
 def id303(data):
-    data = str(bytearray(data).hex())
-
+    alarmvalue = str(bytearray(data).hex())
+    col1 = alarmvalue[0:2]
+    col2 = alarmvalue[2:4]
+    col3 = alarmvalue[4:6]
+    columns = [col1, col2, col3]
+    print(col1, col2, col3)
 
 def id304(data):
     data = str(bytearray(data).hex())
+
 
 
 def ReadCANData(col300, col301, col302, col303, col304):
