@@ -1,5 +1,5 @@
 
-import sys
+import re
 import pika
 import time
 from datetime import datetime
@@ -16,6 +16,8 @@ TimeSinceMotServ = 10
 MechanicalMotTime = 10
 MotRunTimeHour = 10
 MotRunTimeMin = 10
+alarms=""
+
 
 # Set the delay time
 delaytime = 1
@@ -26,7 +28,7 @@ connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 
 # Define the JSON message to send to IoT Hub.
-MSG_TXT = '{{"motorTemp": {motorTemp},"hydraulicTemp": {hydraulicTemp},"fuelLevel":{fuelLevel},"hydraulicPressure":{hydraulicPressure}, "nowTime": {nowTime}}}'
+MSG_TXT = '{{"motorTemp": {motorTemp},"hydraulicTemp": {hydraulicTemp},"fuelLevel":{fuelLevel},"hydraulicPressure":{hydraulicPressure}, "alarms":{alarms}, "nowTime": {nowTime}}}'
 Rabbitmessage = ""
 # Establish the exchange
 channel.exchange_declare(exchange='sensor_exchange', exchange_type='topic')
@@ -75,16 +77,30 @@ def id302(data):
 
 
 def id303(data):
+    data = str(bytearray(data).hex())
+
+def id304(data):
+    errorIndex = 0
+    errors = [80, 40, 20, 10, 8, 4, 2, 1]
     alarmvalue = str(bytearray(data).hex())
     col1 = alarmvalue[0:2]
     col2 = alarmvalue[2:4]
     col3 = alarmvalue[4:6]
     columns = [col1, col2, col3]
     print(col1, col2, col3)
+    for value in columns:
+        if(re.search('[a-zA-Z]', value)):
+            value = int(value)
+        for error in errors:
+            if (error<=value):
+                value=value-error
+                #print(errorIndex)
+                errorList=(errorList + str(errorIndex) + ',')
+            errorIndex = errorIndex + 1
 
-def id304(data):
-    data = str(bytearray(data).hex())
-
+    global alarms
+    alarms = errorList.rstrip(',')
+    print(alarms)
 
 
 def ReadCANData(col300, col301, col302, col303, col304):
@@ -128,7 +144,7 @@ while True:
     nowdatetime = datetime.now()
     nowTime = str(nowdatetime.strftime('%d/%m/%y - %H:%M:%S'))
     nowTime = '"' + nowTime + '"'
-    msg_txt_formatted = MSG_TXT.format(motorTemp=motorTemp, hydraulicTemp=hydraulicTemp, fuelLevel=fuelLevel, hydraulicPressure=hydraulicPressure, nowTime=nowTime)
+    msg_txt_formatted = MSG_TXT.format(motorTemp=motorTemp, hydraulicTemp=hydraulicTemp, fuelLevel=fuelLevel, hydraulicPressure=hydraulicPressure, alarms=alarms, nowTime=nowTime)
     Rabbitmessage = msg_txt_formatted
 
     #channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=Rabbitmessage)

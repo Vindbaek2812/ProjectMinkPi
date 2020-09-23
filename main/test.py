@@ -1,27 +1,28 @@
-import math
-
+import re
 
 def compacted():
+    errorIndex = 0
+    errorList=''
     errors = [80, 40, 20, 10, 8, 4, 2, 1]
-
-    # set the alarmvalue to somthing to see which errors occur
-    alarmvalue = "314080"
-    errorList=""
-    errorIndex=0
+    #alarmvalue = str(bytearray(data).hex())
+    alarmvalue = "33c081"
     col1 = alarmvalue[0:2]
     col2 = alarmvalue[2:4]
     col3 = alarmvalue[4:6]
     columns = [col1, col2, col3]
     print(col1, col2, col3)
     for value in columns:
-        value = int(value)
-        for error in errors:
-            if (error<=value):
-                value=value-error
-                #print(errorIndex)
-                errorList=(errorList + str(errorIndex) + ',')
-            errorIndex = errorIndex + 1
-        print("========")
+        if (re.search('[a-zA-Z]', value)):
+            print("contains a letter")
+        else:
+            value = int(value)
+            for error in errors:
+                if (error <= value):
+                    value = value - error
+                    # print(errorIndex)
+                    errorList = (errorList + str(errorIndex) + ',')
+                errorIndex = errorIndex + 1
+            print("========")
     result = errorList.rstrip(',')
     print('this is: ' + result)
 
