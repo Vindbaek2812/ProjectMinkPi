@@ -116,7 +116,7 @@ def ReadCANData(col300, col301, col302, col303, col304):
     messageID3 = col303
     messageID4 = col304
     while messageID0 == False or messageID1 == False or messageID2 == False or messageID3 == False or messageID4 == False:
-        message = bus.recv(1.0)  # timeout in seconds
+        message = bus.recv(10.0)  # timeout in seconds
 
         if message.arbitration_id == 300 and messageID0 == False:
             id300(message.data)
