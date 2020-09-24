@@ -82,6 +82,7 @@ def id303(data):
 def id304(data):
     errorIndex = 0
     errorList=''
+    index = 0
     errors = [80, 40, 20, 10, 8, 4, 2, 1]
     alarmvalue = str(bytearray(data).hex())
     #print(alarmvalue)
@@ -91,8 +92,9 @@ def id304(data):
     columns = [col1, col2, col3]
     #print(col1, col2, col3)
     for value in columns:
+        index=index + 1
         if (re.search('[a-zA-Z]', value)):
-            if (col3 == "c0"):
+            if (value=="c0" and index==3):
                 errorList = errorList + '16-17-'
         else:
             value = int(value)

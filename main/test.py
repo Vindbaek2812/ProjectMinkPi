@@ -15,7 +15,7 @@ def compacted():
     for value in columns:
         index=index+1
         if (re.search('[a-zA-Z]', value)):
-            if (col3=="c0"):
+            if (value=="c0" and index==3):
                 errorList=errorList + '16-17-'
         else:
             value = int(value)
@@ -28,7 +28,7 @@ def compacted():
 
     global alarms
     alarms = errorList.rstrip('-')
-    print('"' + alarms + '"')
+    #print('"' + alarms + '"')
 
 
 def firstTestToMakeItWork():
