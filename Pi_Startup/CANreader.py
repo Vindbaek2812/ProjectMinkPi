@@ -92,7 +92,8 @@ def id304(data):
     #print(col1, col2, col3)
     for value in columns:
         if (re.search('[a-zA-Z]', value)):
-            print("contains a letter")
+            if (col3 == "c0"):
+                errorList = errorList + '16-17-'
         else:
             value = int(value)
             for error in errors:
@@ -103,6 +104,7 @@ def id304(data):
                 errorIndex = errorIndex + 1
     global alarms
     alarms = errorList.rstrip('-')
+    alarms = '"' + alarms + '"'
     #print(alarms)
 
 def ReadCANData(col300, col301, col302, col303, col304):

@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import pika
-import sys
 from azure.iot.device import IoTHubDeviceClient, Message
 
 # Selects the IoT Hub based on user selection
