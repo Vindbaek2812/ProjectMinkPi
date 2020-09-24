@@ -84,12 +84,12 @@ def id304(data):
     errorList=''
     errors = [80, 40, 20, 10, 8, 4, 2, 1]
     alarmvalue = str(bytearray(data).hex())
-    print(alarmvalue)
+    #print(alarmvalue)
     col1 = alarmvalue[0:2]
     col2 = alarmvalue[2:4]
     col3 = alarmvalue[4:6]
     columns = [col1, col2, col3]
-    print(col1, col2, col3)
+    #print(col1, col2, col3)
     for value in columns:
         if (re.search('[a-zA-Z]', value)):
             print("contains a letter")
@@ -99,11 +99,11 @@ def id304(data):
                 if (error <= value):
                     value = value - error
                     # print(errorIndex)
-                    errorList = (errorList + str(errorIndex) + ',')
+                    errorList = (errorList + str(errorIndex) + '-')
                 errorIndex = errorIndex + 1
     global alarms
-    alarms = errorList.rstrip(',')
-    print(alarms)
+    alarms = errorList.rstrip('-')
+    #print(alarms)
 
 def ReadCANData(col300, col301, col302, col303, col304):
     messageID0 = col300
@@ -149,7 +149,7 @@ while True:
     msg_txt_formatted = MSG_TXT.format(motorTemp=motorTemp, hydraulicTemp=hydraulicTemp, fuelLevel=fuelLevel, hydraulicPressure=hydraulicPressure, alarms=alarms, nowTime=nowTime)
     Rabbitmessage = msg_txt_formatted
 
-    #channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=Rabbitmessage)
+    channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=Rabbitmessage)
     time.sleep(delaytime)
     #print(Rabbitmessage)
 
