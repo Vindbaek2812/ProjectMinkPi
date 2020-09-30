@@ -41,18 +41,25 @@ def makeString(stringPart):
         Rabbitmessage = Rabbitmessage + stringPart
     else:
         Rabbitmessage = Rabbitmessage + ',' + stringPart
+    
 
 
 def SendString():
-    nowdatetime = datetime.now()
-    nowTime = str(nowdatetime.strftime('%d/%m/%y - %H:%M:%S'))
-    nowTime = '"' + nowTime + '"'
     global Rabbitmessage
-    Rabbitmessage=('{' + Rabbitmessage + ',' + nowTime + '}')
+    print(len(Rabbitmessage)>0)
+    if(len(Rabbitmessage) > 0):
+        nowdatetime = datetime.now()
+        nowTime = str(nowdatetime.strftime('%d/%m/%y - %H:%M:%S'))
+        nowTime = '"' + nowTime + '"'
+        Rabbitmessage=('{' + Rabbitmessage + ',' + nowTime + '}')
 
-    #This line is sending the message to RabbitMQ
-    #channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=Rabbitmessage)
-    print(Rabbitmessage)
+        #This line is sending the message to RabbitMQ
+        #channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=Rabbitmessage)
+        print(Rabbitmessage)
+        Rabbitmessage=""
+    else:
+        print("Nothing has changed")
+    
 
 def id300(data):
     data = str(bytearray(data).hex())
@@ -65,7 +72,7 @@ def id300(data):
     data2 = "0x" + data[8:10]
     global hydraulicPressure
     if(hydraulicPressure!=int(data2, 0)):
-        hydraulicPressure = int(data1, 0)
+        hydraulicPressure = int(data2, 0)
         makeString("hydraulicPressure:" + str(hydraulicPressure))
 
     data3 = "0x" + data[12:14]
@@ -133,8 +140,8 @@ def id304(data):
     global alarms
     alarmsList = errorList.rstrip('-')
     if (alarmsList!=alarms):
-        alarms = '"' + alarmsList + '"'
-        makeString('alarms:' + str(alarms))
+        alarms=alarmsList
+        makeString('alarms:' + str('"' + alarmsList + '"'))
 
 
 
@@ -150,7 +157,7 @@ def ReadCANData(col300, col301, col302, col303, col304):
         if message.arbitration_id == 300 and messageID0 == False:
             id300(message.data)
             messageID0 = True
-
+            
         elif message.arbitration_id == 301 and messageID1 == False and messageID0==True:
             id301(message.data)
             messageID1 = True
