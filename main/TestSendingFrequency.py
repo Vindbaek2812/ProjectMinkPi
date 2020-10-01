@@ -50,10 +50,10 @@ def SendString():
 
         #This line is sending the message to RabbitMQ
         #channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=RabbitMessage)
-        #print(RabbitMessage)
+        print(RabbitMessage)
         RabbitMessage=""
-    #else:
-        #print("Nothing has changed")
+    else:
+        print("Nothing has changed")
     
 #Method for converting node 300 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id300(data):
@@ -93,29 +93,29 @@ def id302(data):
     global TimeSinceHydServ
     if(TimeSinceHydServ!=int(data1,0)):
         TimeSinceHydServ = int(data1, 0)
-        makeString("TimeSinceHydServ:" + TimeSinceHydServ)
+        makeString("TimeSinceHydServ:" + str(TimeSinceHydServ))
     data2 = "0x" + data[4:6]
     global TimeSinceMotServ
     if (TimeSinceMotServ != int(data2, 0)):
         TimeSinceMotServ = int(data1, 0)
-        makeString("TimeSinceMotServ:" + TimeSinceMotServ)
+        makeString("TimeSinceMotServ:" + str(TimeSinceMotServ))
     data3 = "0x" + data[8:14]
     global MechanicalMotTime
     if (MechanicalMotTime != int(data3, 0)):
         MechanicalMotTime = int(data3, 0)
-        print("MechanicalMotTime:" + MechanicalMotTime * 10)
+        #print("MechanicalMotTime:" + str(MechanicalMotTime))
 
 
 #Method for converting node 303 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id303(data):
     data = str(bytearray(data).hex())
     data1 = "0x" + data[0:6]
-    print(data1)
     global MotRunTimeHour
     if (MotRunTimeHour != int(data1, 0)):
         MotRunTimeHour = int(data1, 0)
-        print("MotRunTimeHour:" + MotRunTimeHour * 10)
-        print("MotRunTimeHour:" + MotRunTimeHour)
+        #print("MotRunTimeHour:" + str(MotRunTimeHour * 10))
+        print("MotRunTimeHour:" + str(MotRunTimeHour))
+
 #Method for converting node 304 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id304(data):
     errorIndex = 0
