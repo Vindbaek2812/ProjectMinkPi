@@ -5,16 +5,16 @@ from datetime import datetime
 import can
 
 #Different atributes from the CAN bus
-motorTemp = 20
-hydraulicTemp = 20
-fuelLevel=100
-hydraulicPressure=10
-motorRPM=10
-TimeSinceHydServ = 10
-TimeSinceMotServ = 10
-MechanicalMotTime = 10
-MotRunTimeHour = 10
-MotRunTimeMin = 10
+motorTemp = None
+hydraulicTemp = None
+fuelLevel=None
+hydraulicPressure=None
+motorRPM=None
+TimeSinceHydServ = None
+TimeSinceMotServ = None
+MechanicalMotTime = None
+MotRunTimeHour = None
+MotRunTimeMin = None
 alarms=""
 RabbitMessage = ""
 
@@ -40,8 +40,6 @@ def makeString(stringPart):
         RabbitMessage = RabbitMessage + stringPart
     else:
         RabbitMessage = RabbitMessage + ',' + stringPart
-    
-
 
 def SendString():
     global RabbitMessage
@@ -52,10 +50,10 @@ def SendString():
 
         #This line is sending the message to RabbitMQ
         #channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=RabbitMessage)
-        print(RabbitMessage)
+        #print(RabbitMessage)
         RabbitMessage=""
-    else:
-        print("Nothing has changed")
+    #else:
+        #print("Nothing has changed")
     
 #Method for converting node 300 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id300(data):
@@ -101,11 +99,23 @@ def id302(data):
     if (TimeSinceMotServ != int(data2, 0)):
         TimeSinceMotServ = int(data1, 0)
         makeString("TimeSinceMotServ:" + TimeSinceMotServ)
+    data3 = "0x" + data[8:14]
+    global MechanicalMotTime
+    if (MechanicalMotTime != int(data3, 0)):
+        MechanicalMotTime = int(data3, 0)
+        print("MechanicalMotTime:" + MechanicalMotTime * 10)
+
 
 #Method for converting node 303 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id303(data):
     data = str(bytearray(data).hex())
-
+    data1 = "0x" + data[0:6]
+    print(data1)
+    global MotRunTimeHour
+    if (MotRunTimeHour != int(data1, 0)):
+        MotRunTimeHour = int(data1, 0)
+        print("MotRunTimeHour:" + MotRunTimeHour * 10)
+        print("MotRunTimeHour:" + MotRunTimeHour)
 #Method for converting node 304 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id304(data):
     errorIndex = 0
