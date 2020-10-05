@@ -50,7 +50,7 @@ def SendString():
 
         #This line is sending the message to RabbitMQ
         #channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=RabbitMessage)
-        #print(RabbitMessage)
+        print(RabbitMessage)
         RabbitMessage=""
     else:
         print("Nothing has changed")
@@ -85,7 +85,7 @@ def id301(data):
     data2 = "0x" + data[2:4]
     global motorRPM
     motorRPM = int(data2, 0)
-    print(motorRPM)
+    #print(motorRPM)
 
 #Method for converting node 302 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id302(data):
@@ -115,7 +115,7 @@ def id303(data):
     if (MotRunTimeHour != int(data1, 0)):
         MotRunTimeHour = int(data1, 0)
         #print("MotRunTimeHour:" + str(MotRunTimeHour * 10))
-        print("MotRunTimeHour:" + str(MotRunTimeHour))
+        #print("MotRunTimeHour:" + str(MotRunTimeHour))
 
 #Method for converting node 304 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id304(data):
@@ -150,16 +150,12 @@ def id304(data):
 #This method is sorting the CAN messages into each arbitration Id
 def ReadCANData(col300, col301, col302, col303, col304):
     count=0
-
     while col300 == False or col301 == False or col302 == False or col303 == False or col304 == False:
         message = bus.recv(1.0)  # timeout in seconds
-
-        count=count+1
-
-        if(count<=delaytime):
-            print("send message here")
-
-        if message.arbitration_id == 300 and col300 == False:
+        if message.arbitration_id == 100:
+            count=count+1
+            print(count)
+        if message.arbitration_id == 300 and col300 == False and delaytime <= count:
             id300(message.data)
             col300 = True
             
