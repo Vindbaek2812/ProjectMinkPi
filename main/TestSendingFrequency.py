@@ -46,7 +46,7 @@ def SendString():
     if(len(RabbitMessage) > 0):
         nowdatetime = datetime.now()
         nowTime = str(nowdatetime.strftime('%d/%m/%y - %H:%M:%S'))
-        RabbitMessage=('{' + RabbitMessage + ',' + '"' + nowTime + '"' + '}')
+        RabbitMessage=('{' + RabbitMessage + ',' + '"' + 'nowTime' + '"' + '"' + nowTime + '"' + '}')
 
         #This line is sending the message to RabbitMQ
         channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=RabbitMessage)
