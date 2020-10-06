@@ -49,8 +49,8 @@ def SendString():
         RabbitMessage=('{' + RabbitMessage + ',' + '"' + nowTime + '"' + '}')
 
         #This line is sending the message to RabbitMQ
-        #channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=RabbitMessage)
-        print(RabbitMessage)
+        channel.basic_publish(exchange='sensor_exchange',routing_key='sensorData',body=RabbitMessage)
+        #print(RabbitMessage)
         RabbitMessage=""
     else:
         print("Nothing has changed")
@@ -140,10 +140,8 @@ def id304(data):
                 if (error <= value):
                     value = value - error
                     if(errorIndex==0 or errorIndex==1 or errorIndex==10 or errorIndex==11 or errorIndex==14 or errorIndex==15 or errorIndex==17 or errorIndex==21):
-
                         delaytime=5
                     else:
-
                         delaytime=10
                     errorList = (errorList + str(errorIndex) + '-')
                 errorIndex = errorIndex + 1
@@ -161,7 +159,7 @@ def ReadCANData(col300, col301, col302, col303, col304):
         message = bus.recv(1.0)  # timeout in seconds
         if message.arbitration_id == 100:
             count=count+1
-            print(count)
+            #print(count)
         if message.arbitration_id == 300 and col300 == False and delaytime <= count:
             id300(message.data)
             col300 = True
@@ -187,6 +185,9 @@ def ReadCANData(col300, col301, col302, col303, col304):
 
 #This keeps the script running infinitely
 while True:
-    ReadCANData(False, False, False, False, False)
-
+    try:
+        ReadCANData(False, False, False, False, False)
+    except:
+        makeString('alarms:' + '"' + '8' + '"')
+        SendString()
 connection.close()
