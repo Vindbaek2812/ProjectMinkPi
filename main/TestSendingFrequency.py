@@ -122,6 +122,7 @@ def id304(data):
     errorIndex = 0
     errorList = ''
     index = 0
+    global delaytime
     errors = [80, 40, 20, 10, 8, 4, 2, 1]
     alarmvalue = str(bytearray(data).hex())
     col1 = alarmvalue[0:2]
@@ -138,6 +139,12 @@ def id304(data):
             for error in errors:
                 if (error <= value):
                     value = value - error
+                    if(errorIndex==0 or errorIndex==1 or errorIndex==10 or errorIndex==11 or errorIndex==14 or errorIndex==15 or errorIndex==17 or errorIndex==21):
+
+                        delaytime=5
+                    else:
+
+                        delaytime=10
                     errorList = (errorList + str(errorIndex) + '-')
                 errorIndex = errorIndex + 1
     global alarms
