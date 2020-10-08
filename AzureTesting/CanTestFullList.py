@@ -13,7 +13,8 @@ while True:
         print('RPMreader1: ' + str(value1))
 
         data = str(bytearray(message.data).hex())
-        data2 = "0x" + data[4:6] + 256 * data[6:8]
+        print("0x" + data[4:6])
+        data2 = "0x" + data[4:6]
         value2 = int(data2, 0)
         print('RPMreader2: ' + str(value2))
         print("=====================")
