@@ -82,7 +82,13 @@ def id301(data):
     if(motorTemp!=int(data1,0)):
         motorTemp = int(data1, 0)
         makeString("motorTemp:" + str(motorTemp))
-    data2 = "0x" + data[2:4]
+    global motorRPM
+    data2 = data[4:6]
+    data3 = data[6:8]
+    if(motorTemp!=(int("0x" + data2, 0) + 256 * int("0x" + data3, 0))):
+        motorRPM=int("0x" + data2, 0) + 256 * int("0x" + data3, 0)
+        makeString("RPM:" + str(motorRPM))
+
     global motorRPM
     motorRPM = int(data2, 0)
     #print(motorRPM)
