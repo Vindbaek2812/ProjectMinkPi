@@ -47,7 +47,7 @@ def SendString():
     if (len(RabbitMessage) > 0):
         nowdatetime = datetime.now()
         nowTime = str(nowdatetime.strftime('%d/%m/%y - %H:%M:%S'))
-        RabbitMessage = ('{' + RabbitMessage + ',' + '"' + 'nowTime' + '"' + '"' + nowTime + '"' + '}')
+        RabbitMessage = ('{' + RabbitMessage + ',' + '"' + 'nowTime' + '"' + ':' + '"' + nowTime + '"' + '}')
 
         # This line is sending the message to RabbitMQ
         channel.basic_publish(exchange='sensor_exchange', routing_key='sensorData', body=RabbitMessage)
@@ -85,17 +85,13 @@ def id301(data):
     if (motorTemp != int(data1, 0)):
         motorTemp = int(data1, 0)
         makeString("motorTemp:" + str(motorTemp))
+        
     global motorRPM
     data2 = data[4:6]
     data3 = data[6:8]
-    if (motorTemp != (int("0x" + data2, 0) + 256 * int("0x" + data3, 0))):
-        motorRPM = int("0x" + data2, 0) + 256 * int("0x" + data3, 0)
+    if (motorRPM != (int("0x" + data2, 0) + 256 * int("0x" + data3, 0))):
+        motorRPM = (int("0x" + data2, 0) + 256 * int("0x" + data3, 0))
         makeString("RPM:" + str(motorRPM))
-
-    global motorRPM
-    motorRPM = int(data2, 0)
-    # print(motorRPM)
-
 
 # Method for converting node 302 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id302(data):
@@ -161,7 +157,7 @@ def id304(data):
     alarmsList = errorList.rstrip('-')
     if (alarmsList != alarms):
         alarms = alarmsList
-        makeString('alarms:' + str('"' + alarmsList + '"'))
+        makeString('"' + "alarms" + '"' + ':' + str('"' + alarmsList + '"'))
 
 
 # This method is sorting the CAN messages into each arbitration Id
@@ -201,6 +197,6 @@ while True:
     try:
         ReadCANData(False, False, False, False, False)
     except:
-        makeString('alarms:' + '"' + '8' + '"')
+        makeString('"'+'alarms' + '"' + ':' + '"' + '8' + '"')
         SendString()
 connection.close()

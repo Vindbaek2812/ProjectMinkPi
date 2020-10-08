@@ -8,9 +8,9 @@ from azure.iot.device import IoTHubDeviceClient, Message
 CONNECTION_STRING = "HostName=ThyrrestrupMinkIoTHub.azure-devices.net;DeviceId=ThyrrestrupMinkDevice;SharedAccessKey=2veqtyJShmtnORMdBZTGUZtvX8Zm9i06y6YRz3kK+EU="
 client=""
 
-#connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
-#channel = connection.channel()
-#channel.exchange_declare(exchange='sensor_exchange', exchange_type='topic')
+connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+channel = connection.channel()
+channel.exchange_declare(exchange='sensor_exchange', exchange_type='topic')
 
 
 def iothub_client_init():
@@ -42,13 +42,9 @@ def callback(ch, method, properties, body):
 
 
 queue_name = 'sensorData'
-while True:
-    body="{" + '"' + "alarms" + '"' + ":" + '"' +"6-9-6-9" + '"' + "," + '"' + "nowTime" + '"' + ":" + '"' +"24/09/20 - 09:27:59" + '"' + "}"
-    callback(1,2,3, body)
-    time.sleep(5)
 
-#channel.basic_consume(queue=queue_name,on_message_callback=callback,auto_ack=True)
+channel.basic_consume(queue=queue_name,on_message_callback=callback,auto_ack=True)
 
 #Printing the whole statement to troubleshoot
 print(' [*] PiTestConsumer is waiting for messages. To exit press CTRL + C...')
-#channel.start_consuming()
+channel.start_consuming()
