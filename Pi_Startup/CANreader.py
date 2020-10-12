@@ -50,8 +50,8 @@ def SendString():
         RabbitMessage = ('{' + RabbitMessage + ',' + '"' + 'nowTime' + '"' + '"' + nowTime + '"' + '}')
 
         # This line is sending the message to RabbitMQ
-        channel.basic_publish(exchange='sensor_exchange', routing_key='sensorData', body=RabbitMessage)
-        # print(RabbitMessage)
+        #channel.basic_publish(exchange='sensor_exchange', routing_key='sensorData', body=RabbitMessage)
+        print(RabbitMessage)
         RabbitMessage = ""
     else:
         print("Nothing has changed")
@@ -112,21 +112,18 @@ def id302(data):
         makeString("TimeSinceMotServ:" + str(TimeSinceMotServ))
     data3 = "0x" + data[8:14]
     global MechanicalMotTime
-    if (MechanicalMotTime != int(data3, 0)):
-        MechanicalMotTime = int(data3, 0)
-        # print("MechanicalMotTime:" + str(MechanicalMotTime))
-
+    if (MechanicalMotTime != int("0x" + data3[8:10]+ data3[10:12]+ data3[12:14]+ data3[14:16], 0)):
+        MechanicalMotTime = int("0x" + data3[8:10]+ data3[10:12]+ data3[12:14]+ data3[14:16], 0)
+        makeString("mechanicalMotorTimer:" + MechanicalMotTime)
 
 # Method for converting node 303 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id303(data):
     data = str(bytearray(data).hex())
     data1 = "0x" + data[0:6]
     global MotRunTimeHour
-    if (MotRunTimeHour != int(data1, 0)):
-        MotRunTimeHour = int(data1, 0)
-        # print("MotRunTimeHour:" + str(MotRunTimeHour * 10))
-        # print("MotRunTimeHour:" + str(MotRunTimeHour))
-
+    if (MotRunTimeHour != int(data1[0:2] + data1[2:4] + data1[4:6] + data1[6:8], 0)):
+        MotRunTimeHour = int(data1[0:2] + data1[2:4] + data1[4:6] + data1[6:8], 0)
+        makeString("motorRunTimerHour" + MotRunTimeHour)
 
 # Method for converting node 304 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id304(data):
