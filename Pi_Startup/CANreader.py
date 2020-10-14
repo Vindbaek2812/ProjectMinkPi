@@ -64,17 +64,17 @@ def id300(data):
     global fuelLevel
     if (fuelLevel != int(data1, 0)):
         fuelLevel = int(data1, 0)
-        makeString("fuelLevel:" + str(fuelLevel))
+        makeString('"'+"fuelLevel" + '"' + ':' + str(fuelLevel))
     data2 = "0x" + data[8:10]
     global hydraulicPressure
     if (hydraulicPressure != int(data2, 0)):
         hydraulicPressure = int(data2, 0)
-        makeString("hydraulicPressure:" + str(hydraulicPressure))
+        makeString('"' + "hydraulicPressure" + '"' + ':' + str(hydraulicPressure))
     data3 = "0x" + data[12:14]
     global hydraulicTemp
     if (hydraulicTemp != int(data3, 0)):
         hydraulicTemp = int(data3, 0)
-        makeString("hydraulicTemp:" + str(hydraulicTemp))
+        makeString('"' +"hydraulicTemp" + '"' + '"' + str(hydraulicTemp))
 
 
 # Method for converting node 301 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
@@ -84,14 +84,13 @@ def id301(data):
     global motorTemp
     if (motorTemp != int(data1, 0)):
         motorTemp = int(data1, 0)
-        makeString("motorTemp:" + str(motorTemp))
-        
+        makeString('"' + "motorTemp" + '"' + ':' + str(motorTemp))
     global motorRPM
     data2 = data[4:6]
     data3 = data[6:8]
     if (motorRPM != (int("0x" + data2, 0) + 256 * int("0x" + data3, 0))):
         motorRPM = (int("0x" + data2, 0) + 256 * int("0x" + data3, 0))
-        makeString("RPM:" + str(motorRPM))
+        makeString('"' + "RPM" + '"' + ':' + str(motorRPM))
 
 # Method for converting node 302 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id302(data):
@@ -100,17 +99,17 @@ def id302(data):
     global TimeSinceHydServ
     if (TimeSinceHydServ != int(data1, 0)):
         TimeSinceHydServ = int(data1, 0)
-        makeString("TimeSinceHydServ:" + str(TimeSinceHydServ))
+        makeString('"' + "TimeSinceHydServ" + '"' + ':' + str(TimeSinceHydServ))
     data2 = "0x" + data[4:6]
     global TimeSinceMotServ
     if (TimeSinceMotServ != int(data2, 0)):
         TimeSinceMotServ = int(data1, 0)
-        makeString("TimeSinceMotServ:" + str(TimeSinceMotServ))
-    
+        makeString('"' + "TimeSinceMotServ" + '"' + ':' + str(TimeSinceMotServ))
+
     global MechanicalMotTime
     if (MechanicalMotTime != int("0x" + data[14:16]+ data[12:14]+ data[10:12]+ data[8:10], 0)):
         MechanicalMotTime = int("0x" + data[14:16]+ data[12:14]+ data[10:12]+ data[8:10], 0)
-        makeString("mechanicalMotorTimer: " + str(MechanicalMotTime))
+        makeString('"' + "mechanicalMotorTimer" '"' + '' + str(MechanicalMotTime))
 
 # Method for converting node 303 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id303(data):
@@ -118,7 +117,7 @@ def id303(data):
     global MotRunTimeHour
     if (MotRunTimeHour != int("0x" + data[6:8] + data[4:6] + data[2:4] + data[0:2], 0)):
         MotRunTimeHour = int("0x"+ data[6:8] + data[4:6] + data[2:4] + data[0:2], 0)
-        makeString("motorRunTimerHour: " + str(MotRunTimeHour))
+        makeString('"' + "motorRunTimerHour" + '"' + ':' + str(MotRunTimeHour))
 
 # Method for converting node 304 on the CAN bus to readable data and sending it to the makeString method for assembling it into a combined string
 def id304(data):
@@ -190,9 +189,9 @@ def ReadCANData(col300, col301, col302, col303, col304):
 
 # This keeps the script running infinitely
 while True:
-    #try:
-    ReadCANData(False, False, False, False, False)
-    #except:
-        #makeString('"'+'alarms' + '"' + ':' + '"' + '8' + '"')
-        #SendString()
+    try:
+        ReadCANData(False, False, False, False, False)
+    except:
+        makeString('"'+'alarms' + '"' + ':' + '"' + '8' + '"')
+        SendString()
 connection.close()
