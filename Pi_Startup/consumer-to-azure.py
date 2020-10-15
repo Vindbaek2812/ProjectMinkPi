@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import pika
-import time
 from azure.iot.device import IoTHubDeviceClient, Message
 
 # Selects the IoT Hub based on user selection
@@ -29,7 +28,7 @@ def callback(ch, method, properties, body):
     try:
         unsent = True
         while bool(unsent):
-            print(bool(client))
+            #print(bool(client))
             if bool(client):
 
                 client.send_message(message)
@@ -43,7 +42,7 @@ def callback(ch, method, properties, body):
 
 queue_name = 'sensorData'
 
-channel.basic_consume(queue=queue_name,on_message_callback=callback,auto_ack=True)
+channel.basic_consume(queue=queue_name, on_message_callback=callback, auto_ack=True)
 
 #Printing the whole statement to troubleshoot
 print(' [*] PiTestConsumer is waiting for messages. To exit press CTRL + C...')
