@@ -189,8 +189,10 @@ def ReadCANData(col300, col301, col302, col303, col304):
 
 # This keeps the script running infinitely
 while True:
+    #tries reading from CAN
     try:
         ReadCANData(False, False, False, False, False)
+    #If that fails it will send alarm 8 to RabbitMQ because there is no connection to the CAN
     except:
         makeString('"'+'alarms' + '"' + ':' + '"' + '8' + '"')
         SendString()
