@@ -23,7 +23,7 @@ def iothub_client_init():
 def callback(ch, method, properties, body):
     # print(str(body))
     global client
-    # Converts the message into a opbject that is readable to Azure
+    # Converts the message into a object that is readable to Azure
     message = Message(body)
     try:
         unsent = True
@@ -31,7 +31,8 @@ def callback(ch, method, properties, body):
             #print(bool(client))
             if bool(client):
 
-                client.send_message(message)
+                b = client.send_message(message)
+                print(b)
                 print("Sending message: {}".format(message))
                 unsent = False
             else:
