@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import pika
+import time
 from azure.iot.device import IoTHubDeviceClient, Message
 
 # Selects the IoT Hub based on user selection
@@ -25,18 +26,16 @@ def callback(ch, method, properties, body):
     global client
     # Converts the message into a object that is readable to Azure
     message = Message(body)
-    try:
-        unsent = True
-        while bool(unsent):
-            b = client.send_message(message)
-            print(b)
-            if(b==True):
-                print("Sending message: {}".format(message))
-                unsent = False
-
+    unsent = True
+    while(unsent):
+        try:
+            client.send_message(message)
+            print("Sending message: {}".format(message))
+            unsent = False
+        except:
+            print("Nothing was sent")
+            time.sleep(10)
             client = iothub_client_init()
-    except:
-        client = iothub_client_init()
 
 
 queue_name = 'sensorData'
