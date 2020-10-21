@@ -12,6 +12,7 @@ channel = connection.channel()
 channel.exchange_declare(exchange='sensor_exchange', exchange_type='topic')
 
 
+
 def iothub_client_init():
     # Create an IoT Hub client
     print("Connecting to " + "'"+CONNECTION_STRING+"'")
