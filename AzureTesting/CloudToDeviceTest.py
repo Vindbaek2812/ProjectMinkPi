@@ -11,10 +11,10 @@ def message_listener(client):
         message = client.receive_message()
         RECEIVED_MESSAGES += 1
         print("\nMessage received:")
-
+        print(message)
         #print data and both system and application (custom) properties
-        for property in vars(message).items():
-            print ("    {0}".format(property))
+        #for property in vars(message).items():
+            #print ("    {0}".format(property))
 
         print( "Total calls received: {}".format(RECEIVED_MESSAGES))
         print()

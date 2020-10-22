@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="502df9de-a9fa-4533-9c98-715b76374c88" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Pi_Startup/Update.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AzureTesting/BackEndApplication.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AzureTesting/CloudToDeviceTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/AzureTesting/CloudToDeviceTest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +33,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.CloudToDeviceTest">
+  <component name="RunManager" selected="Python.Update">
     <configuration name="CANreader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PraktikMinkPi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,7 +122,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="RPMreader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Update" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PraktikMinkPi" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -129,12 +130,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AzureTesting" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pi_Startup" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AzureTesting/RPMreader.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pi_Startup/Update.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Update" />
         <item itemvalue="Python.CloudToDeviceTest" />
         <item itemvalue="Python.GPStest" />
         <item itemvalue="Python.CANreader" />
         <item itemvalue="Python.MotorRunTimer" />
-        <item itemvalue="Python.RPMreader" />
       </list>
     </recent_temporary>
   </component>
@@ -166,6 +167,7 @@
       <workItem from="1600766029023" duration="64764000" />
       <workItem from="1602056432030" duration="38017000" />
       <workItem from="1603269204908" duration="3167000" />
+      <workItem from="1603276361020" duration="5174000" />
     </task>
     <servers />
   </component>
@@ -177,22 +179,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="739" y="315" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1600932832141" />
-    <state width="916" height="218" key="GridCell.Tab.0.bottom" timestamp="1603276347034">
+    <state width="916" height="215" key="GridCell.Tab.0.bottom" timestamp="1603354662979">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="916" height="218" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603276347034" />
-    <state width="916" height="218" key="GridCell.Tab.0.center" timestamp="1603276347034">
+    <state width="916" height="215" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603354662979" />
+    <state width="916" height="215" key="GridCell.Tab.0.center" timestamp="1603354662979">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="916" height="218" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603276347034" />
-    <state width="916" height="218" key="GridCell.Tab.0.left" timestamp="1603276347034">
+    <state width="916" height="215" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603354662979" />
+    <state width="916" height="215" key="GridCell.Tab.0.left" timestamp="1603354662978">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="916" height="218" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603276347034" />
-    <state width="916" height="218" key="GridCell.Tab.0.right" timestamp="1603276347034">
+    <state width="916" height="215" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603354662978" />
+    <state width="916" height="215" key="GridCell.Tab.0.right" timestamp="1603354662979">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="916" height="218" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603276347034" />
+    <state width="916" height="215" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603354662979" />
     <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1600850850003">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -232,10 +234,11 @@
     <SUITE FILE_PATH="coverage/PraktikMinkPi$TestAzureMessage.coverage" NAME="TestAzureMessage Coverage Results" MODIFIED="1600932944000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$FrequencyTestingSimple.coverage" NAME="FrequencyTestingSimple Coverage Results" MODIFIED="1601980533143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$test.coverage" NAME="test Coverage Results" MODIFIED="1601536201495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
-    <SUITE FILE_PATH="coverage/PraktikMinkPi$CloudToDeviceTest.coverage" NAME="CloudToDeviceTest Coverage Results" MODIFIED="1603276025334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
+    <SUITE FILE_PATH="coverage/PraktikMinkPi$CloudToDeviceTest.coverage" NAME="CloudToDeviceTest Coverage Results" MODIFIED="1603349005458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$consumer_to_azure.coverage" NAME="consumer-to-azure Coverage Results" MODIFIED="1601982587534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pi_Startup" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$RPMreader.coverage" NAME="RPMreader Coverage Results" MODIFIED="1602146713433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$MotorRunTimer.coverage" NAME="MotorRunTimer Coverage Results" MODIFIED="1602502738139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
+    <SUITE FILE_PATH="coverage/PraktikMinkPi$Update.coverage" NAME="Update Coverage Results" MODIFIED="1603354662953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pi_Startup" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$CANreader.coverage" NAME="CANreader Coverage Results" MODIFIED="1602577871156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pi_Startup" />
   </component>
 </project>
