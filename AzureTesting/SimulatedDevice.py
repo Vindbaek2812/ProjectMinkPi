@@ -4,16 +4,15 @@
 import random
 import time
 from datetime import datetime
-
+from azure.iot.device import IoTHubDeviceClient, Message
 # Using the Python Device SDK for IoT Hub:
 #   https://github.com/Azure/azure-iot-sdk-python
 # The sample connects to a device-specific MQTT endpoint on your IoT Hub.
-from azure.iot.device import IoTHubDeviceClient, Message
 
 # The device connection string to authenticate the device with your IoT hub.
 # Using the Azure CLI:
 # az iot hub device-identity show-connection-string --hub-name {YourIoTHubName} --device-id MyNodeDevice --output table
-CONNECTION_STRING = "HostName=ProjectMinkIoTHub.azure-devices.net;DeviceId=MyPythonDevice;SharedAccessKey=G/4FSzB4gkbbH7kXQiiyk43pJfG0/GZ8lt1+zheq6b0="
+CONNECTION_STRING = "HostName=ThyrrestrupMinkIoTHub.azure-devices.net;DeviceId=ThyrrestrupMinkDevice;SharedAccessKey=2veqtyJShmtnORMdBZTGUZtvX8Zm9i06y6YRz3kK+EU="
 
 # Define the JSON message to send to IoT Hub.
 TEMPERATURE = 20.0
