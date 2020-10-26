@@ -10,7 +10,7 @@ channel.exchange_declare(exchange='sensor_exchange', exchange_type='topic')
 
 # Establish a queue called
 queue_name = sys.argv[1]
-result = channel.queue_declare(queue=queue_name, exclusive=False)
+result = channel.queue_declare(queue=queue_name, exclusive=False, durable=True)
 queue_name = result.method.queue
 
 binding_keys = sys.argv[1:]
