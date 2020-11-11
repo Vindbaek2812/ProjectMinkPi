@@ -4,7 +4,7 @@ from azure.iot.device import IoTHubDeviceClient
 
 RECEIVED_MESSAGES = 0
 
-CONNECTION_STRING = "HostName=ThyrrestrupMinkIoTHub.azure-devices.net;DeviceId=service;SharedAccessKey=Y01Nkit/Sk5DKPzrYR8hMzzbMXICtRaJbI/kraUYHn4="
+CONNECTION_STRING = "HostName=ThyrrestrupMinkIoTHub1.azure-devices.net;DeviceId=Service;SharedAccessKey=T4X/stmoiOd4uGO8co6CI7c9l5P5xxS/I1HOm87zPto="
 def message_listener(client):
     global RECEIVED_MESSAGES
     while True:

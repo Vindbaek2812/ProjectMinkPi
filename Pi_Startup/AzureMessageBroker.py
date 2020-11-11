@@ -5,7 +5,7 @@ from azure.iot.device import IoTHubDeviceClient, Message
 
 # Selects the IoT Hub based on user selection
 # Student IoT Hub
-CONNECTION_STRING = "HostName=ThyrrestrupMinkIoTHub.azure-devices.net;DeviceId=ThyrrestrupMinkDevice;SharedAccessKey=2veqtyJShmtnORMdBZTGUZtvX8Zm9i06y6YRz3kK+EU="
+CONNECTION_STRING = "HostName=ThyrrestrupMinkIoTHub1.azure-devices.net;DeviceId=ThyrrestrupDevice;SharedAccessKey=sGxsUoGiXTSkZlwKP2otiqlzgm9wzmlXPF8Qgi85kEA="
 client=""
 
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))

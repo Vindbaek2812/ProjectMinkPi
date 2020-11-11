@@ -21,14 +21,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="2b98e300-8fb4-47d7-b84d-3bbd65655b58" />
   <component name="ProjectId" id="1hrP1a7Bg228jaoNwNgLIsPSgvH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -147,13 +148,14 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.GPStest" />
+        <item itemvalue="Python.CloudToDeviceTest" />
         <item itemvalue="Python.CANreader" />
         <item itemvalue="Python.MotorRunTimer" />
-        <item itemvalue="Python.RPMreader" />
         <item itemvalue="Python.consumer-to-azure" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -168,32 +170,44 @@
       <workItem from="1602056432030" duration="38017000" />
       <workItem from="1603269204908" duration="3167000" />
       <workItem from="1603276361020" duration="5174000" />
+      <workItem from="1603715676786" duration="81000" />
+      <workItem from="1603801733154" duration="207000" />
+      <workItem from="1604435714320" duration="321000" />
+      <workItem from="1604563346483" duration="1569000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="745" y="465" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603715693060">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="745" y="465" key="#com.intellij.fileTypes.FileTypeChooser/-1920.189.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1603715693060" />
     <state x="739" y="315" key="FileChooserDialogImpl" timestamp="1600932832141">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="739" y="315" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1600932832141" />
-    <state width="916" height="215" key="GridCell.Tab.0.bottom" timestamp="1603354662979">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1752" height="306" key="GridCell.Tab.0.bottom" timestamp="1604568135046">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state width="1752" height="306" key="GridCell.Tab.0.bottom/-1920.189.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1604568135046" />
     <state width="916" height="215" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603354662979" />
-    <state width="916" height="215" key="GridCell.Tab.0.center" timestamp="1603354662979">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1752" height="306" key="GridCell.Tab.0.center" timestamp="1604568135046">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state width="1752" height="306" key="GridCell.Tab.0.center/-1920.189.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1604568135046" />
     <state width="916" height="215" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603354662979" />
-    <state width="916" height="215" key="GridCell.Tab.0.left" timestamp="1603354662978">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1752" height="306" key="GridCell.Tab.0.left" timestamp="1604568135046">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state width="1752" height="306" key="GridCell.Tab.0.left/-1920.189.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1604568135046" />
     <state width="916" height="215" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603354662978" />
-    <state width="916" height="215" key="GridCell.Tab.0.right" timestamp="1603354662979">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1752" height="306" key="GridCell.Tab.0.right" timestamp="1604568135046">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state width="1752" height="306" key="GridCell.Tab.0.right/-1920.189.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1604568135046" />
     <state width="916" height="215" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603354662979" />
     <state width="1877" height="363" key="GridCell.Tab.1.bottom" timestamp="1600850850003">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -229,16 +243,18 @@
     <state x="1014" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1602146088230" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PraktikMinkPi$GPStest.coverage" NAME="GPStest Coverage Results" MODIFIED="1603270767327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
-    <SUITE FILE_PATH="coverage/PraktikMinkPi$TestSendingFrequency.coverage" NAME="TestSendingFrequency Coverage Results" MODIFIED="1601373093696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$TestAzureMessage.coverage" NAME="TestAzureMessage Coverage Results" MODIFIED="1600932944000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
-    <SUITE FILE_PATH="coverage/PraktikMinkPi$FrequencyTestingSimple.coverage" NAME="FrequencyTestingSimple Coverage Results" MODIFIED="1601980533143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
-    <SUITE FILE_PATH="coverage/PraktikMinkPi$test.coverage" NAME="test Coverage Results" MODIFIED="1601536201495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/ProjectMinkPi$GPStest.coverage" NAME="GPStest Coverage Results" MODIFIED="1604564325867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/PraktikMinkPi$GPStest.coverage" NAME="GPStest Coverage Results" MODIFIED="1603270767327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$CloudToDeviceTest.coverage" NAME="CloudToDeviceTest Coverage Results" MODIFIED="1603349005458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
-    <SUITE FILE_PATH="coverage/PraktikMinkPi$consumer_to_azure.coverage" NAME="consumer-to-azure Coverage Results" MODIFIED="1601982587534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pi_Startup" />
-    <SUITE FILE_PATH="coverage/PraktikMinkPi$RPMreader.coverage" NAME="RPMreader Coverage Results" MODIFIED="1602146713433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
-    <SUITE FILE_PATH="coverage/PraktikMinkPi$MotorRunTimer.coverage" NAME="MotorRunTimer Coverage Results" MODIFIED="1602502738139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
+    <SUITE FILE_PATH="coverage/ProjectMinkPi$CloudToDeviceTest.coverage" NAME="CloudToDeviceTest Coverage Results" MODIFIED="1604564318425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$Update.coverage" NAME="Update Coverage Results" MODIFIED="1603354662953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pi_Startup" />
+    <SUITE FILE_PATH="coverage/PraktikMinkPi$test.coverage" NAME="test Coverage Results" MODIFIED="1601536201495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/PraktikMinkPi$TestSendingFrequency.coverage" NAME="TestSendingFrequency Coverage Results" MODIFIED="1601373093696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/PraktikMinkPi$RPMreader.coverage" NAME="RPMreader Coverage Results" MODIFIED="1602146713433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
+    <SUITE FILE_PATH="coverage/PraktikMinkPi$consumer_to_azure.coverage" NAME="consumer-to-azure Coverage Results" MODIFIED="1601982587534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pi_Startup" />
+    <SUITE FILE_PATH="coverage/PraktikMinkPi$MotorRunTimer.coverage" NAME="MotorRunTimer Coverage Results" MODIFIED="1602502738139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$CANreader.coverage" NAME="CANreader Coverage Results" MODIFIED="1602577871156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pi_Startup" />
+    <SUITE FILE_PATH="coverage/PraktikMinkPi$FrequencyTestingSimple.coverage" NAME="FrequencyTestingSimple Coverage Results" MODIFIED="1601980533143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
   </component>
 </project>
