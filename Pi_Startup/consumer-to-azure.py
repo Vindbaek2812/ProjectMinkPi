@@ -49,11 +49,3 @@ channel.basic_consume(queue=queue_name, on_message_callback=callback, auto_ack=T
 #Printing the whole statement to troubleshoot
 print(' [*] PiTestConsumer is waiting for messages. To exit press CTRL + C...')
 channel.start_consuming()
-
-
-
-os.system('sudo ip link set can0 type can bitrate 100000')
-can0 = can.interface.Bus(channel = 'can0', bustype = 'socketcan_ctypes')
-while True:
-    msg = can0.recv(10.0)
-    print(msg)
