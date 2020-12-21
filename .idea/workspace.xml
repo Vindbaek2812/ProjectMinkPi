@@ -63,28 +63,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="CANreader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PraktikMinkPi" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pi_Startup" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pi_Startup/CANreader.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="CloudToDeviceTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PraktikMinkPi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,6 +107,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="SimulatedDeviceWithCANdata" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PraktikMinkPi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AzureTesting/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Christian\Documents\GitKrakenProjects\ProjectMinkPi\AzureTesting\azure-iot-samples-python-master\iot-hub\Quickstarts\simulated-device\SimulatedDeviceWithCANdata.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="c2dSimpleDeprecated" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PraktikMinkPi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,9 +155,9 @@
       <list>
         <item itemvalue="Python.C2DMessages" />
         <item itemvalue="Python.CloudToDeviceTest" />
+        <item itemvalue="Python.SimulatedDeviceWithCANdata" />
         <item itemvalue="Python.c2dSimpleDeprecated" />
         <item itemvalue="Python.GPStest" />
-        <item itemvalue="Python.CANreader" />
       </list>
     </recent_temporary>
   </component>
@@ -195,6 +195,22 @@
       <workItem from="1606377993356" duration="961000" />
       <workItem from="1606387460457" duration="6231000" />
       <workItem from="1606423847592" duration="1151000" />
+      <workItem from="1606728136765" duration="599000" />
+      <workItem from="1606738954986" duration="4921000" />
+      <workItem from="1606768321541" duration="102000" />
+      <workItem from="1606811548913" duration="3847000" />
+      <workItem from="1606821528850" duration="1667000" />
+      <workItem from="1606906491578" duration="5383000" />
+      <workItem from="1607331366378" duration="4541000" />
+      <workItem from="1607414741850" duration="4626000" />
+      <workItem from="1607513778702" duration="6220000" />
+      <workItem from="1607588334905" duration="5448000" />
+      <workItem from="1607632528126" duration="323000" />
+      <workItem from="1607933260309" duration="1226000" />
+      <workItem from="1608239609517" duration="609000" />
+      <workItem from="1608240382914" duration="729000" />
+      <workItem from="1608290020651" duration="1776000" />
+      <workItem from="1608538629153" duration="54000" />
     </task>
     <servers />
   </component>
@@ -210,57 +226,69 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="739" y="315" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1600932832141" />
-    <state width="1234" height="321" key="GridCell.Tab.0.bottom" timestamp="1606424527359">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1234" height="276" key="GridCell.Tab.0.bottom" timestamp="1608307741407">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1752" height="306" key="GridCell.Tab.0.bottom/-1920.189.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1604568135046" />
     <state width="916" height="215" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603354662979" />
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.174.1920.1040@-1920.174.1920.1040" timestamp="1607632854589" />
+    <state width="1234" height="276" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.174.1920.1040@0.0.2560.1400" timestamp="1608307741407" />
     <state width="2517" height="225" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.0.1920.1080@0.0.2560.1440" timestamp="1605192714299" />
     <state width="1872" height="381" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.174.1920.1080@-1920.174.1920.1080" timestamp="1606389552993" />
-    <state width="1234" height="321" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.174.1920.1080@0.0.2560.1440" timestamp="1606424527359" />
-    <state width="1234" height="321" key="GridCell.Tab.0.center" timestamp="1606424527358">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1232" height="276" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.174.1920.1080@0.0.2560.1440" timestamp="1606919807603" />
+    <state width="1234" height="276" key="GridCell.Tab.0.center" timestamp="1608307741407">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1752" height="306" key="GridCell.Tab.0.center/-1920.189.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1604568135046" />
     <state width="916" height="215" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603354662979" />
+    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.174.1920.1040@-1920.174.1920.1040" timestamp="1607632854589" />
+    <state width="1234" height="276" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.174.1920.1040@0.0.2560.1400" timestamp="1608307741407" />
     <state width="2517" height="225" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.0.1920.1080@0.0.2560.1440" timestamp="1605192714299" />
     <state width="1872" height="381" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.174.1920.1080@-1920.174.1920.1080" timestamp="1606389552993" />
-    <state width="1234" height="321" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.174.1920.1080@0.0.2560.1440" timestamp="1606424527358" />
-    <state width="1234" height="321" key="GridCell.Tab.0.left" timestamp="1606424527357">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1232" height="276" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.174.1920.1080@0.0.2560.1440" timestamp="1606919807603" />
+    <state width="1234" height="276" key="GridCell.Tab.0.left" timestamp="1608307741407">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1752" height="306" key="GridCell.Tab.0.left/-1920.189.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1604568135046" />
     <state width="916" height="215" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603354662978" />
+    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.174.1920.1040@-1920.174.1920.1040" timestamp="1607632854589" />
+    <state width="1234" height="276" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.174.1920.1040@0.0.2560.1400" timestamp="1608307741407" />
     <state width="2517" height="225" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.0.1920.1080@0.0.2560.1440" timestamp="1605192714299" />
     <state width="1872" height="381" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.174.1920.1080@-1920.174.1920.1080" timestamp="1606389552993" />
-    <state width="1234" height="321" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.174.1920.1080@0.0.2560.1440" timestamp="1606424527357" />
-    <state width="1234" height="321" key="GridCell.Tab.0.right" timestamp="1606424527358">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1232" height="276" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.174.1920.1080@0.0.2560.1440" timestamp="1606919807603" />
+    <state width="1234" height="276" key="GridCell.Tab.0.right" timestamp="1608307741407">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1752" height="306" key="GridCell.Tab.0.right/-1920.189.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1604568135046" />
     <state width="916" height="215" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603354662979" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.174.1920.1040@-1920.174.1920.1040" timestamp="1607632854589" />
+    <state width="1234" height="276" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.174.1920.1040@0.0.2560.1400" timestamp="1608307741407" />
     <state width="2517" height="225" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.0.1920.1080@0.0.2560.1440" timestamp="1605192714299" />
     <state width="1872" height="381" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.174.1920.1080@-1920.174.1920.1080" timestamp="1606389552993" />
-    <state width="1234" height="321" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.174.1920.1080@0.0.2560.1440" timestamp="1606424527358" />
-    <state width="2517" height="507" key="GridCell.Tab.1.bottom" timestamp="1605690918397">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1232" height="276" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.174.1920.1080@0.0.2560.1440" timestamp="1606919807603" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1607606816217">
+      <screen x="-1920" y="174" width="1920" height="1040" />
     </state>
     <state width="1877" height="363" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1600850850003" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.2560.1400/-1920.174.1920.1040@-1920.174.1920.1040" timestamp="1607606816217" />
     <state width="2517" height="507" key="GridCell.Tab.1.bottom/0.0.2560.1440/-1920.174.1920.1080@0.0.2560.1440" timestamp="1605690918397" />
-    <state width="2517" height="507" key="GridCell.Tab.1.center" timestamp="1605690918397">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1607606816217">
+      <screen x="-1920" y="174" width="1920" height="1040" />
     </state>
     <state width="1877" height="363" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1600850850003" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.2560.1400/-1920.174.1920.1040@-1920.174.1920.1040" timestamp="1607606816217" />
     <state width="2517" height="507" key="GridCell.Tab.1.center/0.0.2560.1440/-1920.174.1920.1080@0.0.2560.1440" timestamp="1605690918397" />
-    <state width="2517" height="507" key="GridCell.Tab.1.left" timestamp="1605690918396">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1607606816217">
+      <screen x="-1920" y="174" width="1920" height="1040" />
     </state>
     <state width="1877" height="363" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1600850850003" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.2560.1400/-1920.174.1920.1040@-1920.174.1920.1040" timestamp="1607606816216" />
     <state width="2517" height="507" key="GridCell.Tab.1.left/0.0.2560.1440/-1920.174.1920.1080@0.0.2560.1440" timestamp="1605690918396" />
-    <state width="2517" height="507" key="GridCell.Tab.1.right" timestamp="1605690918397">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1607606816217">
+      <screen x="-1920" y="174" width="1920" height="1040" />
     </state>
     <state width="1877" height="363" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1600850850003" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.2560.1400/-1920.174.1920.1040@-1920.174.1920.1040" timestamp="1607606816217" />
     <state width="2517" height="507" key="GridCell.Tab.1.right/0.0.2560.1440/-1920.174.1920.1080@0.0.2560.1440" timestamp="1605690918397" />
     <state x="1083" y="276" key="SettingsEditor" timestamp="1605188550644">
       <screen x="0" y="0" width="2560" height="1440" />
@@ -286,15 +314,17 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PraktikMinkPi$TestAzureMessage.coverage" NAME="TestAzureMessage Coverage Results" MODIFIED="1600932944000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/ProjectMinkPi$GPStest.coverage" NAME="GPStest Coverage Results" MODIFIED="1605176195603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/ProjectMinkPi$SimulatedDeviceWithCANdata.coverage" NAME="SimulatedDeviceWithCANdata Coverage Results" MODIFIED="1607606980972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$GPStest.coverage" NAME="GPStest Coverage Results" MODIFIED="1603270767327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
-    <SUITE FILE_PATH="coverage/ProjectMinkPi$C2DMessages.coverage" NAME="C2DMessages Coverage Results" MODIFIED="1606424527342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pi_Startup" />
+    <SUITE FILE_PATH="coverage/ProjectMinkPi$C2DMessages.coverage" NAME="C2DMessages Coverage Results" MODIFIED="1608291288393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pi_Startup" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$CloudToDeviceTest.coverage" NAME="CloudToDeviceTest Coverage Results" MODIFIED="1603349005458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
-    <SUITE FILE_PATH="coverage/ProjectMinkPi$CloudToDeviceTest.coverage" NAME="CloudToDeviceTest Coverage Results" MODIFIED="1605797213375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
+    <SUITE FILE_PATH="coverage/ProjectMinkPi$CloudToDeviceTest.coverage" NAME="CloudToDeviceTest Coverage Results" MODIFIED="1607632632775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$Update.coverage" NAME="Update Coverage Results" MODIFIED="1603354662953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pi_Startup" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$test.coverage" NAME="test Coverage Results" MODIFIED="1601536201495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$TestSendingFrequency.coverage" NAME="TestSendingFrequency Coverage Results" MODIFIED="1601373093696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$RPMreader.coverage" NAME="RPMreader Coverage Results" MODIFIED="1602146713433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
     <SUITE FILE_PATH="coverage/ProjectMinkPi$c2dSimpleDeprecated.coverage" NAME="c2dSimpleDeprecated Coverage Results" MODIFIED="1605692635009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
+    <SUITE FILE_PATH="coverage/ProjectMinkPi$SimulatedDevice.coverage" NAME="SimulatedDevice Coverage Results" MODIFIED="1607522912934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$consumer_to_azure.coverage" NAME="consumer-to-azure Coverage Results" MODIFIED="1601982587534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pi_Startup" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$MotorRunTimer.coverage" NAME="MotorRunTimer Coverage Results" MODIFIED="1602502738139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AzureTesting" />
     <SUITE FILE_PATH="coverage/PraktikMinkPi$CANreader.coverage" NAME="CANreader Coverage Results" MODIFIED="1602577871156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pi_Startup" />
